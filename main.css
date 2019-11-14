@@ -1,0 +1,185 @@
+html{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    font-size: 150%;
+}
+
+.header text{
+    position: relative;
+    top: 15%;
+    left: 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+
+.header a{
+    position: relative;
+    top: 15%;
+    text-decoration: none;
+    padding: 15px 15px;
+    color: rgb(126, 126, 126);
+}
+
+.header a:hover{
+    background-color: rgb(241, 241, 241);
+    color: #bbbbbb;
+}
+
+.main{
+    display: inline-block;
+    position: fixed;
+    top: 20vh;
+    left: 18vw;
+    background-color: white;
+    min-height: 500px;
+    height: 70%;
+    width: 75%;
+    border-radius: 5px;
+    padding: 2.5%;
+}
+
+.page-header{
+    background: grey;
+    display: inline-block;
+    position: fixed;
+    height: 70%;
+    width: 5%;
+    top: 20vh;
+    left: 13vw;
+    font-size: 200%;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 10;
+}
+
+/*mobile*/
+
+.sidebar{
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 25vw;
+    max-width: 150px;
+    right: 0;
+    z-index: 100;
+}
+
+.dropButton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25vw;
+    width: 25vw;
+    max-width: 150px;
+    max-height: 150px;
+    cursor: pointer;
+}
+
+.dropNav{
+    display: none;
+    height: 100%;
+    background-color: red;
+}
+
+.dropNav a{
+    display: block;
+    position: relative;
+    padding: 15% 10% 15% 25%;
+    font-size: 150%;
+}
+
+.show{
+    display: block;
+}
+
+.bar {
+    display: block;
+    left: -5px;
+    position: relative;
+    bottom: -75vh;
+    width: 100px; 
+    height: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    color: white;
+    animation-duration: 7s;  
+}
+
+.bar.b1 {
+    background-color: red;
+    animation-name: b_ani_1;
+  }
+  .bar.b2 {
+    background-color: orange;
+    animation-name: b_ani_2;
+  }
+  .bar.b3 {
+    background-color: green;
+    animation-name: b_ani_3;
+  }
+  .bar.b4 {
+    background-color: blue;
+    animation-name: b_ani_4;
+  }
+  .bar.b5 {
+    background-color: purple;
+    animation-name: b_ani_5;
+}
+
+/*animations*/
+@keyframes b_ani {
+    0%, 100% {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+}
+  
+/*mobile*/
+@media only screen and (max-device-width: 1000px) {
+    .sidebar {display: block;}
+    .header {display: none;}
+    .main {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 15%;
+        margin-top: 10%;
+    }
+    .page-header{
+        height: 10%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        writing-mode: horizontal-tb;
+        transform: none;    
+    }
+}
