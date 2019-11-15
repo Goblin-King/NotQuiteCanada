@@ -16,29 +16,38 @@
 
 <section class="header">
     <text>LGBT Detroit Voter Portal</text>
+    <p id ="daysTill">Empty</p>
+    <script>
+	
+var election_date = new Date(2020,10,3);
+ var now_date = Date.now();
+ var Difference_In_Time = election_date.getTime() - now_date;
+var Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+ document.getElementById("daysTill").innerHTML=("It’s "+ 
+Difference_In_Days.toString(10)+" days until the general election. Register to make your vote count!");
+</script>
     <nav id="topnav">
-        <a href="main.html">Home</a>
-        <a href="registration.html">Voting Registration</a>
+        <a href="main.ejs">Home</a>
+        <a href="registration.ejs">Voting Registration</a>
         <a href="">Voting Logistics</a>
-        <a href="">Canidate & Policy Info</a>
-        <a href="">FAQ</a>
+        <a href="events.ejs">Events</a>
+        <a href="https://docs.google.com/document/d/19AHXp-iSns6ahLpi6KxnTYQE8C7m2098u4Jvy8XARpc/edit?usp=sharing">FAQ</a>
     </nav>
 </section>
 
 <aside class="sidebar">
     <button onclick="dropNavFunc()" class="dropButton">Menu</button>
     <nav id="dropDown" class="dropNav">
-        <a href="main.html">Home</a>
-        <a href="registration.html">Voting Registration</a>
+        <a href="main.ejs">Home</a>
+        <a href="registration.ejs">Voting Registration</a>
         <a href="">Voting Logistics</a>
         <a href="">Canidate & Policy Info</a>
-        <a href="">FAQ</a>
+        <a href="https://docs.google.com/document/d/19AHXp-iSns6ahLpi6KxnTYQE8C7m2098u4Jvy8XARpc/edit?usp=sharing">FAQ</a>
     </nav>
 </aside>
 
 <section class="content">
-    <div class="page-header">Voter Registration</div>
-    <div class="main">Information goes here.</div>
+    <div class="voteNote"></div>
 
     <div class="bar-container">
         <div class="bar b1"> External link </div>
