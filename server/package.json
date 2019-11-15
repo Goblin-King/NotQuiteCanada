@@ -1,0 +1,14 @@
+{
+  "name": "not_quite_canada",
+  "version": "1.0.0",
+  "description": "Initial node.js server for oSTEM 2019 Hackathon",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cam Harvey",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,12 @@
+var express = require('express');
+var app = express();
+
+app.get('/', function (req,res) {
+	//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js
+	res.send('Hello World!');
+});
+
+app.listen(3000, function() {
+	console.log('Example app listening on port 3000!');
+});
+
